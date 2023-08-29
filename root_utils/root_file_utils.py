@@ -5,6 +5,7 @@ import numpy as np
 ROOT.gSystem.Load(os.environ['WCSIMDIR'] + "/libWCSimRoot.so")
 
 def convert(numpyfile, rootfile):
+    #Convert a npy file with 4 entries into a root file with the TTree data structure
     softmax = np.load(numpyfile)
     print(len(softmax))
     g_array = softmax[:, 0]

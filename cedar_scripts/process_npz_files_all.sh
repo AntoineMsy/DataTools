@@ -5,12 +5,14 @@
 #SBATCH --cpus-per-task=3
 source /home/amisery/39env/bin/activate
 
+SCRIPTDIR=$(dirname "$0")
+
 for ((i=0; i<=10; i++))
 do
 lb=$((1000*i + 1))  # Calculate the lower bound
 hb=$((1000*(i)))  # Calculate the upper bound
 # sbatch /home/amisery/DataTools/cedar_scripts/process_npz_files_batch.sh "$lb" "$hb"
-sbatch /home/amisery/DataTools/process_npz_files_batch.sh $i
+sbatch "$SCRIPTDIR/process_npz_files_batch.sh" $i
 # sbatch <<EOF
 # #!/bin/bash
 # #SBATCH --account=rpp-blairt2k

@@ -1,4 +1,4 @@
-from root_utils.event_dump import dump_file
+from event_dump import dump_file
 import argparse
 
 home_path = "/project/rpp-blairt2k/rakutsu/iwcd/mc/MassProNov2020/files/wcsim_root/NuMode/2p39_MDT_kmtsui/mdt_iwcd_p320ka_w750m_1e17pot_2p39_wcsim."
